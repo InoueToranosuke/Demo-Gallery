@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Photo Collection</title>
+    <meta
+      name="description"
+      content="写真家 Mana Ohmoto のポートフォリオWebサイト"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="view.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-text">
+        <h1 class="header-name">View</h1>
+      </div>
+      <div class="header-pattern"></div>
+      <img
+        src="/view/v_images/umi2.jpg"
+        alt="Hero Image"
+        style="
+          width: 100vw;
+          height: 90vh;
+          object-fit: cover;
+          object-position: center top;
+        "
+      />
+    </header>
+
+    <main class="grid">
+      <a class="grid-gallery" href="v_images/flight.jpg" data-aos="fade-up" data-alt="flight">
+        <img
+          class="grid-item"
+          src="v_images/flight.jpg"
+          alt="flight"
+        />
+        <div class="alt-text">flight</div> <!-- altテキストをここで表示 -->
+      </a>
+      
+      </a>
+      <a class="grid-gallery" href="v_images/hasi.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/hasi.jpg"
+          srcset="v_images/hasi.jpg 4284w, v_images/hasi.jpg 8568w"
+          alt="Golden Gate Bridge"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/IMG_2120.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/IMG_2120.jpg"
+          srcset="v_images/IMG_2120.jpg 4284w, v_images/IMG_2120.jpg 8568w"
+          alt="Palace of Fine Arts"
+        />
+      </a>
+      <a
+        class="grid-big-top grid-gallery"
+        href="v_images/apple.jpg"
+        data-aos="fade-up"
+      >
+        <img
+          class="grid-item"
+          src="v_images/apple.jpg"
+          srcset="v_images/apple.jpg 4284w, v_images/apple.jpg 8568w"
+          alt="Apple Vistor Center"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/apple2.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/apple2.jpg"
+          srcset="v_images/apple2.jpg 4284w, v_images/apple2.jpg 8568w"
+          alt="Apple Vistor Center"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/hotel.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/hotel.jpg"
+          srcset="v_images/hotel.jpg 4284w, v_images/hotel.jpg 8568w"
+          alt="Hotel view"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/intel.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/intel.jpg"
+          srcset="v_images/intel.jpg 4284w, v_images/intel.jpg 8568w"
+          alt="Intel Museum"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/googl2.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/googl2.jpg"
+          srcset="v_images/googl2.jpg 4284w, v_images/googl2.jpg 8568w"
+          alt="Google Store"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/mikky.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/mikky.jpg"
+          srcset="v_images/mikky.jpg 4284w, v_images/mikky.jpg 8568w"
+          alt="Walt Disney Family Museum"
+        />
+      </a>
+      <a
+        class="grid-big-bottom grid-gallery"
+        href="v_images/mikky2.jpg"
+        data-aos="fade-up"
+      >
+        <img
+          class="grid-item"
+          src="v_images/mikky2.jpg"
+          srcset="v_images/mikky2.jpg 4284w, v_images/mikky2.jpg 8568w"
+          alt="Walt Disney Family Museum"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/niji.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/niji.jpg"
+          srcset="v_images/niji.jpg 4284w, v_images/niji.jpg 8568w"
+          alt="Rainbow"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/niji2.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/niji2.jpg"
+          srcset="v_images/niji2.jpg 4284w, v_images/niji2.jpg 8568w"
+          alt="Rainbow"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/yosemite.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/yosemite.jpg"
+          srcset="v_images/yosemite.jpg 4284w, v_images/yosemite.jpg 8568w"
+          alt="Yosemite"
+        />
+      </a>
+      <a
+        class="grid-big-top2 grid-gallery"
+        href="v_images/yosemitetonnel.jpg"
+        data-aos="fade-up"
+      >
+        <img
+          class="grid-item"
+          src="v_images/yosemitetonnel.jpg"
+          srcset="v_images/yosemitetonnel.jpg 4284w, v_images/yosemitetonnel.jpg 8568w"
+          alt="Yosemite"
+        />
+      <a class="grid-gallery" href="v_images/yosemte2.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/yosemte2.jpg"
+          srcset="v_images/yosemte2.jpg 4284w, v_images/yosemte2.jpg 8568w"
+          alt="Yosemite"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/rock.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/rock.jpg"
+          srcset="v_images/rock.jpg 4284w, v_images/rock.jpg 8568w"
+          alt="Yosemite"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/holyy.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/holyy.jpg"
+          srcset="v_images/holyy.jpg 4284w, v_images/holyy.jpg 8568w"
+          alt="Hollywood"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/aben.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/aben.jpg"
+          srcset="v_images/aben.jpg 4284w, v_images/aben.jpg 8568w"
+          alt="Hollywood"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/night.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/night.jpg"
+          srcset="v_images/night.jpg 4284w, v_images/night.jpg 8568w"
+          alt="Hollywood"
+        />
+      </a>
+      <a
+        class="grid-big-bottom2 grid-gallery"
+        href="v_images/sunta.jpg"
+        data-aos="fade-up"
+      >
+        <img
+          class="grid-item"
+          src="v_images/sunta.jpg"
+          srcset="v_images/sunta.jpg 4284w, v_images/sunta.jpg 8568w"
+          alt="Santa Monica Pier"
+        />
+      </a>
+
+      <a class="grid-gallery" href="v_images/sunta3.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/sunta3.jpg"
+          srcset="v_images/sunta3.jpg 4284w, v_images/sunta3.jpg 8568w"
+          alt="Elizabeth Tower"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/sunta4.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/sunta4.jpg"
+          srcset="v_images/sunta4.jpg 4284w, v_images/sunta4.jpg 8568w"
+          alt="Santa Monica Pier"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/sunta5.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/sunta5.jpg"
+          srcset="v_images/sunta5.jpg 4284w, v_images/sunta5.jpg 8568w"
+          alt="Santa Monica Pier"
+        />
+      </a>
+      <a
+        class="grid-big-top3 grid-gallery"
+        href="v_images/dis.jpg"
+        data-aos="fade-up"
+      >
+        <img
+          class="grid-item"
+          src="v_images/dis.jpg"
+          srcset="v_images/dis.jpg 4284w, v_images/dis.jpg 8568w"
+          alt="Disneyland"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/dis2.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/dis2.jpg"
+          srcset="v_images/dis2.jpg 4284w, v_images/dis2.jpg 8568w"
+          alt="Disneyland"
+        />
+      </a>
+      <a class="grid-gallery" href="v_images/dis3.jpg" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="v_images/dis3.jpg"
+          srcset="v_images/dis3.jpg 4284w, v_images/dis3.jpg 8568w"
+          alt="Disneyland"
+        />
+      </a>
+      <a
+        class="grid-big-bottom3 grid-gallery"
+        href="v_images/dis4.jpg"
+        data-aos="Disneyland"
+      >
+        <img
+          class="grid-item"
+          src="v_images/dis4.jpg"
+          srcset="v_images/dis4.jpg 4284w, v_images/dis4.jpg 8568w"
+          alt="Disneyland"
+        />
+      </a>
+    </main>
+    <footer>
+      <p class="footer-link">
+        <a href="/index.html">HOME</a> / <a href="/life/life.html">LIFE</a> /
+        <a href="/food/food.html">FOOD</a>
+      </p>
+      <p class="copyright"><small>&copy; 2024 Toranosuke Inoue</small></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="view.js"></script>
+  </body>
+</html>

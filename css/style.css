@@ -1,0 +1,287 @@
+@charset 'UTF-8';
+
+/*
+COLORS
+================================================ */
+:root {
+  --text: #333; /* 通常時の文字色 */
+  --bg: #fff; /* 通常時の背景色 */
+  --video-opacity: 0.5; /* ビデオの透明度 */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ddd; /* ダークモード時の文字色 */
+    --bg: #000; /* ダークモード時の背景色 */
+    --video-opacity: 0.7; /* ダークモード時のビデオ透明度 */
+  }
+}
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%; /* 基本フォントサイズ */
+}
+body {
+  color: var(--text); /* 文字色 */
+  background: var(--bg); /* 背景色 */
+  font-family: "Bree Serif", sans-serif; /* フォント */
+  transition: 0.5s; /* トランジション効果 */
+}
+
+/*
+COMMON
+================================================ */
+p {
+  line-height: 1.7; /* 段落の行間 */
+}
+img {
+  max-width: 100%; /* 画像が親要素を超えないようにする */
+}
+a:hover {
+  color: #0bd; /* リンクホバー時の色 */
+}
+
+/*
+HEADER
+================================================ */
+header {
+  position: relative;
+  margin-bottom: 0.5rem; /* ヘッダーの下に余白 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 1)
+  ); /* 黒のグラデーション */
+}
+
+header img {
+  width: 100vw;
+  height: 90vh;
+  object-fit: contain; /* 画像全体を表示 */
+  object-position: center center; /* 画像の中心を表示 */
+}
+
+.header-text {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  text-align: center; /* テキストを中央揃え */
+}
+.header-title {
+  font-size: 2rem; /* タイトルのフォントサイズ */
+}
+.header-name {
+  font-size: 4rem; /* 名前のフォントサイズ */
+  margin-bottom: 1rem; /* 下に余白 */
+}
+.header-link {
+  font-size: 2.2rem; /* ソーシャルリンクのフォントサイズ */
+}
+.header-pattern {
+  position: absolute;
+  z-index: 1;
+  background-size: auto auto;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--bg) 2px,
+    var(--bg) 4px
+  ); /* パターン背景 */
+}
+header video {
+  object-fit: cover;
+  object-position: center top;
+  opacity: var(--video-opacity); /* ビデオの透明度 */
+}
+.header-text,
+.header-pattern,
+header video {
+  width: 100vw; /* ビデオとテキストの幅 */
+  height: 90vh; /* ビデオとテキストの高さ */
+}
+
+/*
+GRID
+================================================ */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr; /* 画像部分とフッター部分のレイアウト */
+  gap: 5px; /* 画像間のスペース */
+  width: 94vw;
+  margin: 0px auto 5px;
+}
+
+/* 画像のグリッド */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列に均等に配置 */
+  gap: 0; /* アイテム間の間隔をなくす */
+  width: 100%; /* 親要素の幅に合わせて広げる */
+  grid-template-rows: auto; /* 高さを自動調整 */
+}
+
+.grid-item {
+  width: 100%; /* アイテムの幅を100%に設定して均等に広げる */
+  height: 100%; /* アイテムの高さを100%に設定 */
+  object-fit: cover; /* 画像のアスペクト比を保ちながら親要素にフィット */
+  object-position: center; /* 画像の中央を表示 */
+  filter: grayscale(100%); /* 初期状態で画像を白黒に */
+  transition: 0.3s; /* ホバー時のトランジション効果 */
+  border-radius: 15px; /* 角を丸くする */
+  border: 4px solid #fff; /* 白い縁取り */
+}
+
+/* 画像ホバー時の変化 */
+.grid-item:hover {
+  filter: grayscale(0); /* ホバー時に白黒解除 */
+  transform: scale(1.1); /* ホバー時に拡大 */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); /* ホバー時にシャドウ */
+  z-index: 3; /* 表示順序を前に */
+  position: relative; /* 相対位置に変更 */
+  border-radius: 15px; /* ホバー時も角を丸くする */
+  border: 4px solid #0bd; /* ホバー時に縁取りの色を変更 */
+}
+
+/* 画像の配置 */
+.grid-item:nth-child(1) {
+  grid-column: 1 / 2; /* 左端の画像 */
+}
+
+.grid-item:nth-child(2) {
+  grid-column: 2 / 3; /* 中央の画像 */
+}
+
+.grid-item:nth-child(3) {
+  grid-column: 3 / 4; /* 右端の画像 */
+}
+
+.grid-big-top {
+  grid-column: 1/3; /* 1〜3列を占める */
+  grid-row: 2/3; /* 2〜3行を占める */
+}
+.grid-big-bottom {
+  grid-column: 1/3; /* 1〜3列を占める */
+  grid-row: 6/7; /* 6〜7行を占める */
+} /*
+GRID ITEM（画像ホバー時のスタイル）
+================================================ */
+.grid-gallery {
+  position: relative; /* 画像上に重ねるための相対位置 */
+}
+
+.grid-gallery::after {
+  content: ""; /* 擬似要素のために必要 */
+  position: absolute; /* 画像の下にグラデーションを表示するため */
+  bottom: 0; /* 画像の下部に表示 */
+  left: 0;
+  width: 100%;
+  height: 30%; /* 画像の下3割にグラデーション */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  ); /* 黒のグラデーション */
+  transition: opacity 0.3s ease; /* ホバー時のトランジション効果 */
+}
+
+.grid-gallery .grid-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を枠にフィット */
+  object-position: center; /* 画像の中央を表示 */
+  transition: 0.3s; /* ホバー時のトランジション効果 */
+}
+
+.grid-gallery:hover .grid-item {
+  filter: grayscale(0); /* ホバー時に白黒解除 */
+  transform: scale(1.1); /* ホバー時に拡大 */
+  z-index: 3; /* 表示順序を前に */
+  position: relative; /* 相対位置に変更 */
+}
+
+/*
+TEXT OVERLAY（画像上に文字を表示）
+================================================ */
+.grid-gallery .overlay-text {
+  position: absolute; /* 文字を画像上に重ねる */
+  bottom: 10%; /* 画像の下から10%の位置に配置 */
+  left: 50%;
+  transform: translateX(-50%); /* 中央揃え */
+  color: white; /* 文字色を白に */
+  font-size: 2rem; /* 文字サイズ */
+  font-weight: bold; /* 文字の太さ */
+  z-index: 2; /* 文字を最前面に表示 */
+  opacity: 1; /* 文字は常に表示 */
+}
+
+.grid-gallery .overlay-text {
+  opacity: 1; /* 文字は常に表示 */
+}
+
+/*
+FOOTER
+================================================ */
+footer {
+  text-align: center; /* フッター内のテキストを中央揃え */
+  padding: 2rem; /* フッターの余白 */
+  background-color: #333; /* フッターの背景色 */
+  color: #fff; /* フッターの文字色 */
+}
+
+.footer-link {
+  margin-bottom: 0.5rem; /* ソーシャルリンクの下に余白 */
+}
+
+/* フッター部分の位置を固定 */
+.grid-container footer {
+  grid-row: 2 / 3; /* 2行目に配置（画像グリッドの下） */
+}
+/*
+LIGHTBOX LUMINOUS
+================================================ */
+.lum-lightbox.lum-open {
+  z-index: 4; /* ライトボックスの表示順序 */
+}
+.lum-lightbox-inner img {
+  max-width: 120vw; /* 画像の最大幅 */
+  max-height: 80vh; /* 画像の最大高さ */
+}
+
+/*
+DESKTOP SIZE
+================================================ */
+@media (min-width: 600px) {
+  /* Header */
+  .header-name {
+    font-size: 5rem; /* デスクトップ用に名前のフォントサイズを大きく */
+  }
+  /* Grid */
+  .grid {
+    width: 80vw; /* グリッドの幅 */
+    gap: 1.7vw; /* アイテム間隔 */
+    grid-template-columns: repeat(3, 32vw); /* 3列に変更 */
+    grid-template-rows: repeat(1, 26vw); /* 5行に変更 */
+  }
+  .grid-big-bottom {
+    grid-column: 2/4; /* 2〜3列を占める */
+    grid-row: 4/5; /* 4〜5行を占める */
+  }
+  .grid-item {
+    transition: 0.3s; /* ホバー時のトランジション効果 */
+  }
+  .grid-item:hover {
+    filter: grayscale(0); /* ホバー時に白黒解除 */
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); /* ホバー時にシャドウ */
+    transform: scale(1.1); /* ホバー時に拡大 */
+    z-index: 3; /* 表示順序を前に */
+    position: relative; /* 相対位置に変更 */
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Photo Collection</title>
+    <meta
+      name="description"
+      content="写真家 Mana Ohmoto のポートフォリオWebサイト"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-text">
+        <p class="header-title">Photo Collection</p>
+        <h1 class="header-name">Study In America</h1>
+        <p class="header-link">
+          <!-- 変更されたリンク -->
+          11.12Tue▶11.21Thu
+        </p>
+      </div>
+      <div class="header-pattern"></div>
+      <img
+        src="usa_images/IMG_2019.jpg"
+        alt="Hero Image"
+        style="
+          width: 100vw;
+          height: 90vh;
+          object-fit: cover;
+          object-position: center top;
+        "
+      />
+    </header>
+
+    <main class="grid">
+      <a class="grid-gallery" href="view/view.html" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="usa_images/umi.jpg"
+          srcset="usa_images/umi.jpg 4284w, usa_images/umi.jpg 8568w"
+          alt="VIEW"
+        />
+        <div class="overlay-text">VIEW</div>
+        <!-- 文字のオーバーレイ -->
+      </a>
+
+      <a class="grid-gallery" href="life/life.html" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="usa_images/k.jpg"
+          srcset="usa_images/k.jpg 4284w, usa_images/k.jpg 8568w"
+          alt="LIFE"
+        />
+        <div class="overlay-text">LIFE</div>
+        <!-- 文字のオーバーレイ -->
+      </a>
+
+      <a class="grid-gallery" href="food/food.html" data-aos="fade-up">
+        <img
+          class="grid-item"
+          src="usa_images/food.jpg"
+          srcset="usa_images/food.jpg 4284w, usa_images/food.jpg 8568w"
+          alt="FOOD"
+        />
+        <div class="overlay-text">FOOD</div>
+        <!-- 文字のオーバーレイ -->
+      </a>
+    </main>
+
+    <footer>
+      <p class="footer-link">
+        <a href="view/view.html">VIEW</a> / <a href="life/life.html">LIFE</a> /
+        <a href="food/food.html">FOOD</a>
+      </p>
+      <p class="copyright"><small>&copy; 2024 Toranosuke Inoue</small></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
